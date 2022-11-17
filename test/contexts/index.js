@@ -1,26 +1,20 @@
-import {
-  contexts as credentialsContexts,
-  constants as credentialConstants
-} from 'credentials-context';
-import {
-  contexts as didContexts,
-  constants as didConstants
-} from 'did-context';
-import {
-  contexts as v1Contexts,
-  constants as v1Constants
-} from 'veres-one-context';
+const credentialsContexts = require('credentials-context').contexts;
+const credentialConstants = require('credentials-context').constants;
+const didContexts = require('did-context').contexts;
+const didConstants = require('did-context').constants;
+const v1Contexts = require('veres-one-context').contexts;
+const v1Constants = require('veres-one-context').constants;
 
-import {invalidId} from './invalid_id.js';
-import {nullVersion} from './null_version.js';
-import {nullId} from './null_id.js';
-import {nullType} from './null_type.js';
+const {invalidId} = require('./invalid_id.js');
+const {nullVersion} = require('./null_version.js');
+const {nullId} = require('./null_id.js');
+const {nullType} = require('./null_type.js');
 
 const {CREDENTIALS_CONTEXT_V1_URL} = credentialConstants;
 const {DID_CONTEXT_URL} = didConstants;
 const {VERES_ONE_CONTEXT_V1_URL} = v1Constants;
 
-export const invalidContexts = {
+const invalidContexts = {
   veresOne: {
     url: VERES_ONE_CONTEXT_V1_URL,
     value: v1Contexts.get(VERES_ONE_CONTEXT_V1_URL)
@@ -53,4 +47,8 @@ export const invalidContexts = {
     url: 'https://null-doc.org',
     value: null
   }
+};
+
+module.exports = {
+  invalidContexts
 };

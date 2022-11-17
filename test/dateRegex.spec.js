@@ -1,10 +1,10 @@
 /*!
  * Copyright (c) 2019-2022 Digital Bazaar, Inc. All rights reserved.
  */
-import chai from 'chai';
+const chai = require('chai');
 chai.should();
 
-import * as vc from '../lib/index.js';
+const vc = require('../lib/index.js');
 
 describe('verifies RFC3339 Dates', function() {
   it('verify a valid date', function() {

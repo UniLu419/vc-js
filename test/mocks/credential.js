@@ -1,4 +1,4 @@
-export const credential = {
+const credential = {
   '@context': [
     'https://www.w3.org/2018/credentials/v1',
     'https://www.w3.org/2018/credentials/examples/v1'
@@ -11,4 +11,8 @@ export const credential = {
     id: 'did:example:ebfeb1f712ebc6f1c276e12ec21',
     alumniOf: '<span lang="en">Example University</span>'
   }
+};
+
+module.exports = {
+  credential,
 };

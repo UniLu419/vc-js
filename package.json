@@ -22,7 +22,7 @@
     "email": "support@digitalbazaar.com"
   },
   "license": "BSD-3-Clause",
-  "type": "module",
+  "type": "commonjs",
   "exports": "./lib/index.js",
   "files": [
     "lib/**/*.js"

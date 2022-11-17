@@ -1,7 +1,7 @@
 /* eslint-disable quotes, quote-props, max-len */
-import constants from '../constants.js';
+const constants = require('../constants.js');
 
-export const mock = {};
+const mock = {};
 
 const didContexts = [
   constants.DID_CONTEXT_URL,
@@ -64,4 +64,8 @@ privateDidDocuments.alpha = {
       "publicKeyBase58": "GZDzPsdkB4ca1ELMHs4bd4Lj2sS53g77di1C4YhQobQN"
     }
   ]
+};
+
+module.exports = {
+  mock
 };

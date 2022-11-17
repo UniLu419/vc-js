@@ -1,26 +1,28 @@
 /*!
  * Copyright (c) 2019-2022 Digital Bazaar, Inc. All rights reserved.
  */
-import chai from 'chai';
+const chai = require('chai');
 const should = chai.should();
 
-import {
+const {
   Ed25519VerificationKey2018
-} from '@digitalbazaar/ed25519-verification-key-2018';
-import jsigs from 'jsonld-signatures';
-import jsonld from 'jsonld';
-import {Ed25519Signature2018} from '@digitalbazaar/ed25519-signature-2018';
-import {CredentialIssuancePurpose} from '../lib/CredentialIssuancePurpose.js';
+} = require('@digitalbazaar/ed25519-verification-key-2018');
+const jsigs = require('jsonld-signatures');
+const jsonld = require('jsonld');
+const {Ed25519Signature2018} = require('@digitalbazaar/ed25519-signature-2018');
+const {
+  CredentialIssuancePurpose
+} = require('../lib/CredentialIssuancePurpose.js');
 
-import {mock as mockData} from './mocks/mock.data.js';
-import {v4 as uuid} from 'uuid';
-import * as vc from '../lib/index.js';
-import {MultiLoader} from './MultiLoader.js';
-import {contexts as realContexts} from '../lib/contexts/index.js';
-import {invalidContexts} from './contexts/index.js';
-import {credential as mockCredential} from './mocks/credential.js';
-import {assertionController} from './mocks/assertionController.js';
-import {VeresOneDriver} from 'did-veres-one';
+const mockData = require('./mocks/mock.data.js').mock;
+const uuid = require('uuid').v4;
+const vc = require('../lib/index.js');
+const {MultiLoader} = require('./MultiLoader.js');
+const realContexts = require('../lib/contexts/index.js').contexts;
+const {invalidContexts} = require('./contexts/index.js');
+const mockCredential = require('./mocks/credential.js').credential;
+const {assertionController} = require('./mocks/assertionController.js');
+const {VeresOneDriver} = require('did-veres-one');
 
 const contexts = Object.assign({}, realContexts);
 const testContextLoader = () => {

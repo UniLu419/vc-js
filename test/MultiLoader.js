@@ -1,4 +1,4 @@
-export class MultiLoader {
+class MultiLoader {
   constructor({documentLoader} = {}) {
     this.loaders = [];
     if(documentLoader) {
@@ -28,3 +28,7 @@ export class MultiLoader {
   }
 
 } // end MultiLoader
+
+module.exports = {
+  MultiLoader
+};

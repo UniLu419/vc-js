@@ -1,5 +1,5 @@
 /* eslint-disable quotes, quote-props, max-len */
-export const invalidId =
+const invalidId =
 {
   "@context": [{
     "@version": 1.1
@@ -22,4 +22,7 @@ export const invalidId =
 
     "referenceId": "cred:referenceId"
   }]
+};
+module.exports = {
+  invalidId
 };

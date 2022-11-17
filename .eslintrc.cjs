@@ -9,10 +9,10 @@ module.exports = {
   extends: [
     'digitalbazaar',
     'digitalbazaar/jsdoc',
-    'digitalbazaar/module'
+    // 'digitalbazaar/module'
   ],
   rules: {
     'jsdoc/require-description-complete-sentence': 0,
-    'unicorn/prefer-node-protocol': 'error'
+    // 'unicorn/prefer-node-protocol': 'error'
   }
 };
